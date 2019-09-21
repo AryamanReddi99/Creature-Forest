@@ -9,7 +9,7 @@ from Creature_Forest_Base import *
 import seaborn as sns
 
 
-# In[3]:
+# In[9]:
 
 
 creature_list = []
@@ -27,7 +27,7 @@ hawk_population.append(sum(creature.name == 'Hawk' for creature in creature_list
 if hawk_population[0] != 0:
     population_quotient = [round(dove_population[0]/hawk_population[0], 2)]
 
-num_generations = 100
+num_generations = 50
 
 for i in range(1,num_generations):
     #if i == 20:

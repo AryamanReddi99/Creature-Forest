@@ -1,23 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[41]:
+# In[10]:
 
 
 import random
 import matplotlib.pyplot as plt
 
-class Dove:
-    def __init__(self,food = 0):
-        self.name = 'Dove'
-        self.food = food
-    def interact(self, opponent):
-        if opponent is None:
-            self.food = 2
-        elif opponent.name == 'Dove':
-            self.food = 1
-        elif opponent.name == 'Hawk':
-            self.food = 0.5
+
+# In[5]:
+
+
+class Bird:
+    """
+    Base constructor class for birds
+    """
+    def __init__(self, food=0):
+        self.food=food
+    def interact(self,opponent):
+        return None    #Birds need a specific class species to interact
     def survive(self):
         death_chance = random.random()
         if self.food < death_chance:
@@ -30,8 +31,36 @@ class Dove:
             return False
         else:
             return True
-        
-class Hawk:
+
+
+# In[9]:
+
+
+#Define specific creature classes
+
+class Dove(Bird):
+    """
+    Non-confrontational, shares with opponent
+    """
+    def __init__(self, food=0):
+        self.name = 'Dove'
+        self.food = food
+    def interact(self, opponent):
+        if opponent is None:
+            self.food = 2
+        elif opponent.name == 'Dove':
+            self.food = 1
+        elif opponent.name == 'Hawk':
+            self.food = 0.5
+        elif opponent.name == 'Goose':
+            self.food = 1
+        elif opponent.name == 'Crow':
+            self.food = 0.5
+
+class Hawk(Bird):
+    """
+    Aggresive, fights for food
+    """
     def __init__(self, food = 0):
         self.name = 'Hawk'
         self.food = food
@@ -42,21 +71,51 @@ class Hawk:
             self.food = 1.5
         elif opponent.name == 'Hawk':
             self.food = 0
-    def survive(self):
-        death_chance = random.random()
-        if self.food < death_chance:
-            return False #death
-        else:
-            return True  #survival
-    def reproduce(self):
-        non_reproduction_chance = random.random()
-        if (self.food - 1) < non_reproduction_chance:
-            return False
-        else:
-            return True
+        elif opponent.name == 'Goose':
+            self.food = 0
+        elif opponent.name == 'Crow':
+            self.food = 1.5
+
+class Goose(Bird):
+    """
+    Nice to doves, fights with aggressors.
+    """
+    def __init__(self, food=0):
+        self.name = 'Goose'
+        self.food = food
+    def interact(self,opponent):
+        if opponent is None:
+            self.food = 2
+        elif opponent.name == 'Dove':
+            self.food = 1
+        elif opponent.name == 'Hawk':
+            self.food = 0
+        elif opponent.name == 'Goose':
+            self.food = 1
+        elif opponent.name == 'Crow':
+            self.food = 1
+
+class Crow(Bird):
+    """
+    Puts up an aggresive display, reverts to dove if challenged
+    """
+    def __init__(self, food=0):
+        self.name = 'Crow'
+        self.food = food
+    def interact(self, opponent):
+        if opponent is None:
+            self.food = 2
+        elif opponent.name == 'Dove':
+            self.food = 1.5
+        elif opponent.name == 'Hawk':
+            self.food = 0.5
+        elif opponent.name == 'Goose':
+            self.food = 1
+        elif opponent.name == 'Crow':
+            self.food = 1
 
 
-# In[45]:
+# In[7]:
 
 
 def run_generation(creature_list, carrying_capacity):
