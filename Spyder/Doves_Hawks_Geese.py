@@ -4,7 +4,7 @@
 # In[3]:
 
 
-import import_ipynb
+#import import_ipynb
 from Creature_Forest_Base import *
 import seaborn as sns
 

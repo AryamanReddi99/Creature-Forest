@@ -4,19 +4,17 @@
 # In[1]:
 
 
-import import_ipynb
+#import import_ipynb
 from Creature_Forest_Base import *
 import seaborn as sns
 
 
-# In[9]:
+# In[16]:
 
 
 creature_list = []
 for i in range(1):
-    creature_list.append(Dove())
     creature_list.append(Hawk())
-
 
 generation_count = [0]
 dove_population = []
@@ -27,12 +25,12 @@ hawk_population.append(sum(creature.name == 'Hawk' for creature in creature_list
 if hawk_population[0] != 0:
     population_quotient = [round(dove_population[0]/hawk_population[0], 2)]
 
-num_generations = 50
+num_generations = 100
 
 for i in range(1,num_generations):
-    #if i == 20:
-    #    creature_list.append(Hawk())
-    #    random.shuffle(creature_list)
+    if i == 10:
+        creature_list.append(Dove())
+        random.shuffle(creature_list)
     dove_per_gen = 0
     hawk_per_gen = 0
     creature_list = run_generation(creature_list, carrying_capacity=1000)
