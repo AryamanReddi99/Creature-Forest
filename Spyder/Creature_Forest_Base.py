@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 class Bird:
     """
-    Base constructor class for birds
+    Base class for agents
     """
     def __init__(self, food=0):
         self.food=food
@@ -26,9 +26,9 @@ class Bird:
     def reproduce(self):
         non_reproduction_chance = random.random()
         if (self.food - 1) < non_reproduction_chance:
-            return False
+            return False # no reproduction
         else:
-            return True
+            return True # reprodution occurs
 
 
 # In[5]:
@@ -115,7 +115,7 @@ class Crow(Bird):
 
 # In[14]:
 
-
+# run a single generation
 def run_generation(creature_list, carrying_capacity):
     #assign creatures to resource list
     resources_used = 0
