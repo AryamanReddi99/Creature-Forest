@@ -6,6 +6,6 @@ These scripts can be run within any Python IDE, with the exception of **Variable
 
 **Modules Required**
 
-seaborn
-matplotlib.pyplot
-import_ipnyb (if using notebook)
+seaborn  
+matplotlib.pyplot  
+import_ipnyb (if using notebook)  
