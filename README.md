@@ -14,7 +14,11 @@ Example Plot from ***Doves_Hawks_Coexistence.ipynb***
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)
 
-Each script, apart from ***Creature_Forest_Base*** and ***Variable_Payoff_Simulator.ipynb***, simulate the progression of a particular scenario. 
+Example Plot from ***Goose_Infiltration_Of_Hawks.ipynb***
+
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/download.png?raw=true)
+
+Each script, apart from ***Creature_Forest_Base.ipynb*** and ***Variable_Payoff_Simulator.ipynb***, simulate the progression of a particular scenario. 
 
 New agents are simple to add by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
 
