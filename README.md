@@ -35,9 +35,9 @@ Where:
 **c**: score for Species A when facing Species B  
 **d**: score for Species B when facing Species B  
 
-See **Theory** for a visual  representation of how this affect decision flow.
+See **Theory** for a visual  representation of how this affects decision flow.
 
-These values can be defined in **payoff_dict** below to simulate population growth and resource control between Species A and Species B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
+Payoff values can be defined in **payoff_dict** below to simulate population growth and resource control between Species A and Species B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
 
 ```python
 payoff_dict = {
@@ -67,6 +67,7 @@ In this case two arrows flip, so the equilibrium state of the system is when 50%
 A generalised payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies.
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/generalised.png" width="300">
+
 ## Further Reading
 
 Prisoner's Dilemma:  https://www.investopedia.com/terms/p/prisoners-dilemma.asp  
