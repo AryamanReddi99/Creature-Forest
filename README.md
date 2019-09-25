@@ -24,7 +24,7 @@ Each script offers full control of:
 
 ***Variable_Payoff_Simulator.ipynb*** can be used to visualise the relative expectance of two competing species as a function of population fraction:
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/variable_payoff.png?raw=true)
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Annotation%202019-09-25%20181249.png)
 
 Where:
 **a**: score for Species A when facing Species A
