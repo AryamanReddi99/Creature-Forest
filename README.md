@@ -54,7 +54,13 @@ A variable payoff matrix allows us to visualise a generalised version of a famou
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
-We can see how playing around with the payoff values may cause the decision flow between states to change, resulting in different equilibrium state; for example, another GT problem known as Doves and Hawks:
+We can see how playing around with the payoff values may cause the decision flow between states to change, resulting in different equilibrium states; for example, another GT problem known as Doves and Hawks:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/HD.png" width="300">
 
+In this case the equilibrium state of the system is at 50% one strategy (playing Dove) and 50% the other strategy (playing Hawk), as the equilibrium point of the expectance plots predicts.
+
+## Further Reading
+
+Prisoner's Dilemma:  https://www.investopedia.com/terms/p/prisoners-dilemma.asp
+Doves and Hawks:  https://www.youtube.com/watch?v=YNMkADpvO4w&ab_channel=Primer
