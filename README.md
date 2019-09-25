@@ -6,17 +6,19 @@ These scripts can be run within any Python IDE, with the exception of ***Variabl
 
 **Modules Required:**
 
-random
+random  
 matplotlib.pyplot  
 import_ipnyb (if using notebook)  
 
-**Example Plot**
+Example Plot from ***Doves_Hawks_Coexistence.ipynb***
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)
 
-All scripts part from ***Creature_Forest_Base*** and ***Variable_Payoff_Simulator.ipynb*** simulate the progression of a particular scenario. 
+All scripts, apart from ***Creature_Forest_Base*** and ***Variable_Payoff_Simulator.ipynb***, each simulate the progression of a particular scenario. 
 
-Each script offers full control of:  
+New agents are simple to add by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
+
+Each script offers control over:  
 * Starting population
 * Environmental carrying capacity
 * Number of generations
@@ -32,6 +34,8 @@ Where:
 **b**: score for Species B when facing Species A  
 **c**: score for Species A when facing Species B  
 **d**: score for Species B when facing Species B  
+
+See **Theory** for a visual  representation of how this affect decision flow.
 
 These values can be defined in **payoff_dict** below to simulate the progression of population growth and resource control between Species A and Species B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
 
@@ -60,7 +64,10 @@ We can see how playing around with the payoff values may cause the decision flow
 
 In this case the equilibrium state of the system is at 50% one strategy (playing Dove) and 50% the other strategy (playing Hawk), as the equilibrium point of the expectance plots predicts.
 
+A generalised payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies.
+
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/generalised.png" width="300">
 ## Further Reading
 
-Prisoner's Dilemma:  https://www.investopedia.com/terms/p/prisoners-dilemma.asp
+Prisoner's Dilemma:  https://www.investopedia.com/terms/p/prisoners-dilemma.asp  
 Doves and Hawks:  https://www.youtube.com/watch?v=YNMkADpvO4w&ab_channel=Primer
