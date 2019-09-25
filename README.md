@@ -50,7 +50,11 @@ Note that increaing the ageing rate of the creatures reduces the predictability 
 
 ## Theory
 
-A variable payoff matrix allows us to visualise a generalised version of a famous game in Game Theory, the Prisoner's Dilemma. The classic problem outlines a scenario where defection by both parties results in a Nash Equilibirum - a stabke state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+A variable payoff matrix allows us to visualise a generalised version of a famous game in Game Theory, the Prisoner's Dilemma. The classic problem outlines a scenario where defection by both parties results in a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png =250x250)
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="250">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
+
+We can see how playing around with the payoff values may cause the decision flow between states to change, resulting in different equilibrium state; for example, another GT problem known as Doves and Hawks:
+
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/HD.png" width="300">
+
