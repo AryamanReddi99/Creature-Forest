@@ -10,6 +10,6 @@ random
 matplotlib.pyplot  
 import_ipnyb (if using notebook)  
 
-![Image of doves hawks and geese](https://github.com/AryamanReddi99/Creature-Forest/tree/master/Images/doves_hawks_geese.png)
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)
 
 
