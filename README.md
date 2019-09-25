@@ -52,4 +52,4 @@ Note that increaing the ageing rate of the creatures reduces the predictability 
 
 A variable payoff matrix allows us to visualise a generalised version of a famous game in Game Theory, the Prisoner's Dilemma. The classic problem outlines a scenario where defection by both parties results in a Nash Equilibirum - a stabke state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
-
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png)
