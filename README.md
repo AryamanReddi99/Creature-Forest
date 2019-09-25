@@ -6,6 +6,10 @@ These scripts can be run within any Python IDE, with the exception of **Variable
 
 **Modules Required**
 
-seaborn  
+random
 matplotlib.pyplot  
 import_ipnyb (if using notebook)  
+
+![Image of doves hawks and geese](https://github.com/AryamanReddi99/Creature-Forest/tree/master/Images/doves_hawks_geese.png)
+
+
