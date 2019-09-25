@@ -8,13 +8,13 @@ These scripts can be run within any Python IDE, with the exception of ***Variabl
 
 random  
 matplotlib.pyplot  
-import_ipnyb (if using notebook)  
+import_ipnyb (if using notebooks)  
 
 Example Plot from ***Doves_Hawks_Coexistence.ipynb***
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)
 
-All scripts, apart from ***Creature_Forest_Base*** and ***Variable_Payoff_Simulator.ipynb***, each simulate the progression of a particular scenario. 
+Each script, apart from ***Creature_Forest_Base*** and ***Variable_Payoff_Simulator.ipynb***, simulate the progression of a particular scenario. 
 
 New agents are simple to add by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
 
@@ -37,7 +37,7 @@ Where:
 
 See **Theory** for a visual  representation of how this affect decision flow.
 
-These values can be defined in **payoff_dict** below to simulate the progression of population growth and resource control between Species A and Species B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
+These values can be defined in **payoff_dict** below to simulate population growth and resource control between Species A and Species B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
 
 ```python
 payoff_dict = {
@@ -54,15 +54,15 @@ Note that increaing the ageing rate of the creatures reduces the predictability 
 
 ## Theory
 
-A variable payoff matrix allows us to visualise a generalised version of a famous game in Game Theory, the Prisoner's Dilemma. The classic problem outlines a scenario where defection by both parties results in a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+Consider Game Theory's most widely used game: the Prisoners Dilemma. The problem outlines a scenario where defection by both parties is a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
-We can see how playing around with the payoff values may cause the decision flow between states to change, resulting in different equilibrium states; for example, another GT problem known as Doves and Hawks:
+We can see how playing around with the payoff values may cause the decision flow between states to change, resulting in different equilibrium states; for example, in another GT problem known as Doves and Hawks:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/HD.png" width="300">
 
-In this case the equilibrium state of the system is at 50% one strategy (playing Dove) and 50% the other strategy (playing Hawk), as the equilibrium point of the expectance plots predicts.
+In this case two arrows flip, so the equilibrium state of the system is when 50% of agents employ one strategy (playing Dove) and 50% the other (playing Hawk), as the equilibrium point of the expectance plot predicts.
 
 A generalised payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies.
 
