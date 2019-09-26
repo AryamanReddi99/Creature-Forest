@@ -20,6 +20,20 @@ Example Plot from ***Goose_Infiltration_Of_Hawks.ipynb***
 
 Each script, apart from ***Creature_Forest_Base.ipynb*** and ***Variable_Payoff_Simulator.ipynb***, simulate the progression of a particular scenario. 
 
+***Creature_Forest_Base.ipynb*** currently defines 4 strategies:
+
+1. Dove
+   * Shares resources with others
+2. Hawk
+   * Is aggresive, steals resources from others
+   * Fights to the death when meeting other hawks
+3. Goose
+   * Shares with doves
+   * Fights to the death with hawks
+4. Crow
+   * Steals from doves
+   * Backs down when confronted 
+
 New agents are simple to add by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
 
 Each script offers control over:  
@@ -54,7 +68,7 @@ payoff_dict = {
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/variable_plot.png?raw=true)
 
-Note that increaing the ageing rate of the creatures reduces the predictability of the model.
+Note that increasing the ageing rate of the creatures reduces the predictability of the model.
 
 ## Theory
 
