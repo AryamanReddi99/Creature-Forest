@@ -32,7 +32,7 @@ Each script, apart from ***Creature_Forest_Base.ipynb*** and ***Variable_Payoff_
    * Steals from doves
    * Backs down when confronted by hawks & geese
 
-New agents are simple to add by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
+New agents can simply be added by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
 
 Each script offers control over:  
 * Starting population
@@ -70,7 +70,7 @@ Note that increasing the ageing rate of the creatures reduces the predictability
 
 ## Theory
 
-Consider Game Theory's most widely used game: the Prisoners Dilemma. The problem outlines a scenario where defection by both parties is a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+Consider Game Theory's most widely used game: the Prisoner's Dilemma. The problem outlines a scenario where defection by both parties is a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
@@ -78,12 +78,12 @@ We can see how playing around with the payoff values may cause the decision flow
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/HD.png" width="300">
 
-In this case two arrows flip, so the equilibrium state of the system is when 50% of agents employ one strategy (playing Dove) and 50% the other (playing Hawk), as the equilibrium point of the expectance plot predicts.
+In this case two arrows flip, so the equilibrium state of the system is when 50% of agents employ one strategy (playing Dove) and 50% the other (playing Hawk), as the expectance plot above predicts.
 
-A payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies. The interaction scores also allow us to predict the stable state of a system.
+A payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies.  
 
-**Example**
-What if, instead of fighting to the death, hawks had a 25% chance of survival after each encounter with each other?
+**Example**  
+What if, instead of fighting to the death, hawks left encounters wounded but with a 25% chance of survival? 
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/modified-hawks-expectance.png" width="300">
 
