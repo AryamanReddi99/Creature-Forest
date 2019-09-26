@@ -10,13 +10,11 @@ random
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)
 Example Plot from ***Doves_Hawks_Coexistence.ipynb***
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)
-
-Example Plot from ***Goose_Infiltration_Of_Hawks.ipynb***
-
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/download.png?raw=true)
+Example Plot from ***Goose_Infiltration_Of_Hawks.ipynb***  
 
 Each script, apart from ***Creature_Forest_Base.ipynb*** and ***Variable_Payoff_Simulator.ipynb***, simulate the progression of a particular scenario. 
 
@@ -82,7 +80,24 @@ We can see how playing around with the payoff values may cause the decision flow
 
 In this case two arrows flip, so the equilibrium state of the system is when 50% of agents employ one strategy (playing Dove) and 50% the other (playing Hawk), as the equilibrium point of the expectance plot predicts.
 
-A generalised payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies.
+A payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies. The interaction scores also allow us to predict the stable state of a system.
+
+For example: what if instead of fighting to the death, hawks had a 25% chance of survival after each en
+
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/modified-hawks-expectance.png" width="300">
+
+Our expectance plot predicts equilibrium at about one-third doves. We can insert our payoff values into **payoff_dict** and observe the simulation:
+
+```python
+payoff_dict = {
+    "a": 1,
+    "b": 1.5,
+    "c": 0.5,
+    "d": 0.25
+}
+```
+
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/modified-hawks-pop.png" width="300">
 
 ## Further Reading
 
