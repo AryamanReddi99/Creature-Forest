@@ -30,7 +30,7 @@ Each script, apart from ***Creature_Forest_Base.ipynb*** and ***Variable_Payoff_
    * Fights to the death with hawks
 4. Crow
    * Steals from doves
-   * Backs down when confronted 
+   * Backs down when confronted by hawks & geese
 
 New agents are simple to add by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
 
