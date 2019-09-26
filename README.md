@@ -82,7 +82,8 @@ In this case two arrows flip, so the equilibrium state of the system is when 50%
 
 A payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies. The interaction scores also allow us to predict the stable state of a system.
 
-For example: what if instead of fighting to the death, hawks had a 25% chance of survival after each en
+**Example**
+What if, instead of fighting to the death, hawks had a 25% chance of survival after each encounter with each other?
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/modified-hawks-expectance.png" width="300">
 
