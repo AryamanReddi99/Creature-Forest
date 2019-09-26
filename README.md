@@ -70,7 +70,7 @@ Note that increasing the ageing rate of the creatures reduces the predictability
 
 ## Theory
 
-Consider Game Theory's most widely used game: the Prisoner's Dilemma. The problem outlines a scenario where defection by both parties is a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+Consider Game Theory's most widely known game: the Prisoner's Dilemma. The problem outlines a scenario where defection by both parties is a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
