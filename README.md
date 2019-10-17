@@ -13,7 +13,7 @@ copy
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true = 250x250)  
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true | width=250)  
 Example Plot from ***Multiple.ipynb***
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/download.png?raw=true)  
