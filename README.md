@@ -13,15 +13,13 @@ copy
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true)  
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
 Example Plot from ***Multiple.ipynb***
 
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(2).png?raw=true" width="1000" height="400">
+Example Plot from ***Infiltration.ipynb***  
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/download.png?raw=true)  
-Example Plot from ***Goose_Infiltration_Of_Hawks.ipynb***  
-
-Each script, apart from ***Creature_Forest_Base.ipynb*** and ***Variable_Payoff_Simulator.ipynb***, simulates the progression of a particular scenario. 
+This repository
 
 ***Creature_Forest_Base.ipynb*** currently defines 4 strategies:
 
