@@ -132,9 +132,12 @@ payoff_dict = {
 <img src= "https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Variable/download.png?raw=true" width = "800" height="400">
 </p>  
 
-***Payoff scores identical to Hawks vs Doves***
+***Payoff scores identical to Hawks vs Doves***  
 
-Consider the Prisoner's Dilemma once more. The problem outlines a scenario where defection by both parties is a Nash Equilibirum - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+
+
+
+Consider the Prisoner's Dilemma once more. The problem outlines a scenario where defection by both parties is a **Nash Equilibirum** - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
