@@ -1,27 +1,29 @@
 # Creature-Forest
 Strategy interaction in a virtual biological ecosystem.
 
+## Purpose
+This repository aims to observe the interaction and long-term success of various stratgies by allowing them to compete in a virtual ecosystem. Strategies obtain points by foraging in the environment, and can use these points to survive and propagate their strategy to their offspring. We can use Game Theory to predict the long-term success of these iterated interactions.  
+
+Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
+
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
+Example Plot from ***Multiple.ipynb***
+
 ## Usage
 These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of ***Variable_Payoff.ipynb***
 
 **Modules Required:**
 
-random 
-numpy
-pandas
-copy
+random  
+numpy  
+pandas  
+copy  
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
-Example Plot from ***Multiple.ipynb***
+## Hard-coded strategies
 
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(2).png?raw=true" width="1000" height="400">
-Example Plot from ***Infiltration.ipynb***  
-
-This repository
-
-***Creature_Forest_Base.ipynb*** currently defines 4 strategies:
+***Creature_Forest_Base.ipynb*** currently defines 4 hard-coded strategies:
 
 1. Dove
    * Shares resources with others
