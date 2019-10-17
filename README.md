@@ -100,7 +100,7 @@ Introduction of hawks to stable dove populations, or vice-versa, eventually resu
 </p>  
 
 ***Invading crows***  
-Crows are able to hijack a normal Hawk/Dove equilibrium by exploiting the doves until they are eliminated. They then reach a similar equilibrium with the hawks by playing Dove henceforth.
+Crows are able to hijack a stable Hawk/Dove equilibrium by exploiting the doves until they are eliminated. They then reach a similar equilibrium with the hawks by playing Dove henceforth.
 
 
 
