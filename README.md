@@ -57,8 +57,7 @@ New agents can be added by extending the base class in **Creature_Forest_Base.ip
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="420" height="250">
 </p>  
 
-***Isolated strategies***
-
+***Isolated strategies***  
 From top left: Doves, Geese, Hawks, Crows. The horizontal lines indicate the average population over the simulation runtime. When left alone, each species reach an equilibrium with the environment. Hawks have a rather unstable equilibrium due to the fact that they kill each other on sight.
 
 What happens when we let them interact?  
@@ -67,7 +66,7 @@ What happens when we let them interact?
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Dual/download%20(4).png?raw=true" width="800" height="400">
 </p>   
 
-***Doves vs Hawks***
+***Doves vs Hawks***  
 Letting doves and hawks interact results in an equilibrium. This is because each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
 
 
