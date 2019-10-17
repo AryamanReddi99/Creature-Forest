@@ -7,11 +7,10 @@ This repository aims to observe the interaction and long-term success of various
 Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
-Example Plot from
- ***Multiple_Species.ipynb***  
+Example Plot from **Multiple_Species.ipynb**
 
 ## Usage
-These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of ***Variable_Payoff.ipynb***
+These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of **Variable_Payoff.ipynb**
 
 **Modules Required:**
 
@@ -24,7 +23,7 @@ import_ipnyb (if using notebooks)
 
 ## Hard-coded strategies
 
-***Creature_Forest_Base.ipynb*** currently defines 4 hard-coded strategies:
+**Creature_Forest_Base.ipynb** currently defines 4 hard-coded strategies:
 
 1. Dove
    * Shares resources with others
@@ -38,7 +37,7 @@ import_ipnyb (if using notebooks)
    * Steals from doves
    * Backs down when confronted by hawks & geese
 
-New agents can be added by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10 cycles. The function `run_simulation()` runs the generations and outputs a dataframe of agent populations.  
+New agents can be added by extending the base class in **Creature_Forest_Base.ipynb**. Each agent has a lifespan of 10 cycles. The function `run_simulation()` runs the generations and outputs a dataframe of agent populations.  
 
 `run_simulation()` offers the following parameters as arguments:  
 * Starting population
@@ -54,7 +53,7 @@ New agents can be added by extending the base class in ***Creature_Forest_Base.i
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="420" height="250">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="420" height="250">
 </p> 
-Images from ***Single_Species.ipynb***. 
+Images from **Single_Species.ipynb**. 
 From top left: Doves, Geese, Hawks, Crows. The horizontal lines indicate the average population over the simulation runtime. When left alone, each species reach an equilibrium with the environment. Hawks have a rather  unstable equilibrium due to the fact that they kill each other on sight.
 
 What happens when we let them interact?  
