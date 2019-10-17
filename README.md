@@ -1,5 +1,5 @@
 # Creature-Forest
-Game theory and strategy evolution
+Strategy interaction in a virtual biological ecosystem.
 
 ## Usage
 These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of ***Variable_Payoff.ipynb***
@@ -13,7 +13,7 @@ copy
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true)  
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true = 250x250)  
 Example Plot from ***Multiple.ipynb***
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/download.png?raw=true)  
