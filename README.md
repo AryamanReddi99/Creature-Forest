@@ -163,7 +163,7 @@ payoff_dict = {
 }
 ```
 <p align="center">
-<img src="hhttps://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Variable/download%20(1).png?raw=true" width="800" height = "400">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Variable/download%20(1).png?raw=true" width="800" height = "400">
 </p>
 
 ***Modified payoff***  
