@@ -48,6 +48,15 @@ New agents can be added by extending the base class in ***Creature_Forest_Base.i
 * Creature ageing rates
 * Gene mutation rates
 
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download.png?raw=true" width="1000" height="400"><img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(2).png?raw=true" width="1000" height="400">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="1000" height="400">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="1000" height="400">
+
+
+
+
+
+
 
 ***Variable_Payoff_Simulator.ipynb*** can be used to visualise the relative expectance of two competing species as a function of population fraction:
 
