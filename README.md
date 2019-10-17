@@ -53,7 +53,7 @@ New agents can be added by extending the base class in ***Creature_Forest_Base.i
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="420" height="250">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="420" height="250">
 </p> 
-Images from ***Single_Species.ipynb***  
+Images from ***Single_Species.ipynb***   
 From top left: Doves, Geese, Hawks, Crows. The horizontal lines indicate the average population over the simulation runtime. When left alone, each species reach an equilibrium with the environment. Hawks have a rather  unstable equilibrium due to the fact that they kill each other on sight.
 
 What happens when we let them interact?  
