@@ -1,17 +1,20 @@
 # Creature-Forest
-Simulation of agents competing for resources with different strategies.
+Game theory and strategy evolution
 
 ## Usage
-These scripts can be run within any Python IDE, with the exception of ***Variable_Payoff_Simulator.ipynb***, which requires a Jupyter notebook due to ipywidgets.
+These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of ***Variable_Payoff.ipynb***
 
 **Modules Required:**
 
-random  
+random 
+numpy
+pandas
+copy
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
-![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/doves_hawks_geese.png)  
-Example Plot from ***Doves_Hawks_Coexistence.ipynb***
+![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true)  
+Example Plot from ***Multiple.ipynb***
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/download.png?raw=true)  
 Example Plot from ***Goose_Infiltration_Of_Hawks.ipynb***  
