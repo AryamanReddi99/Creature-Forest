@@ -92,14 +92,14 @@ We can also allow for infiltration of invading strategies to see how they disrup
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download.png?raw=true" width="420" height="250"><img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(1).png?raw=true" width="420" height="250">
 </p>  
 
-***Invading doves and hawks***
+***Invading doves and hawks***  
 Introduction of hawks to stable dove populations, or vice-versa, eventually results in a similar equilbrium as before given that the invading agents do not starve to death due to limited resources before gaining a foothold.
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(9).png?raw=true" width="800" height="400">
 </p>  
 
-***Invading crows***
+***Invading crows***  
 Crows are able to hijack a normal Hawk/Dove equilibrium by exploiting the doves until they are eliminated. They then reach a similar equilibrium with the hawks by playing Dove henceforth.
 
 
