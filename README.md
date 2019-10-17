@@ -40,7 +40,7 @@ import_ipnyb (if using notebooks)
    * Steals from doves
    * Backs down when confronted by hawks & geese
 
-New agents can be added by extending the base class in **Creature_Forest_Base.ipynb**. Each agent has a lifespan of 10 cycles. The function `run_simulation()` runs the generations and outputs a dataframe of agent populations. Hostile interactions result in death as all food obtained is used up during the altercation. Inccreasing the ageing rate decreases the predictability of the model. 
+New agents can be added by extending the base class in **Creature_Forest_Base.ipynb**. Each agent has a lifespan of 10 cycles. The function `run_simulation()` runs the generations and outputs a dataframe of agent populations. Hostile interactions result in death as all energy obtained is used up during the altercation. Increasing the ageing rate decreases the predictability of the model. 
 
 `run_simulation()` offers the following parameters as arguments:  
 * Starting population
