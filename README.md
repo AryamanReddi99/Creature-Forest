@@ -7,7 +7,7 @@ This repository aims to observe the interaction and long-term success of various
 Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
-Example Plot from ***Multiple.ipynb***
+Example Plot from ***Multiple.ipynb***  
 
 ## Usage
 These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of ***Variable_Payoff.ipynb***
@@ -37,14 +37,17 @@ import_ipnyb (if using notebooks)
    * Steals from doves
    * Backs down when confronted by hawks & geese
 
-New agents can simply be added by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10.
+New agents can be added by extending the base class in ***Creature_Forest_Base.ipynb***. Each agent has a lifespan of 10 cycles. The function `run_simulation()` runs the generations and outputs a dataframe of agent populations.  
 
-Each script offers control over:  
+`run_simulation()` offers the following parameters as arguments:  
 * Starting population
 * Environmental carrying capacity
 * Number of generations
 * Invading species
-* Creature ageing rate
+* Variable payoff scores
+* Creature ageing rates
+* Gene mutation rates
+
 
 ***Variable_Payoff_Simulator.ipynb*** can be used to visualise the relative expectance of two competing species as a function of population fraction:
 
