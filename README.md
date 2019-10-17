@@ -9,7 +9,7 @@ Considering animals in a closed ecosystem competing for common resources is a us
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">
 Example Plot from   ***MultipleSpecies.ipynb***
 
-***hi***
+***hi_bye***
 
 ## Usage
 These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of **Variable_Payoff.ipynb**
