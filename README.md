@@ -48,9 +48,9 @@ New agents can be added by extending the base class in ***Creature_Forest_Base.i
 * Creature ageing rates
 * Gene mutation rates
 
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download.png?raw=true" width="400" height="200"><img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(2).png?raw=true" width="400" height="200">
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="250" height="65">
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="250" height="65">
+<img align = "center " src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download.png?raw=true" width="400" height="200"><img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(2).png?raw=true" width="400" height="200">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="400" height="200">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="400" height="200">
 
 
 
