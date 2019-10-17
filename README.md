@@ -2,7 +2,7 @@
 Strategy interaction in a virtual biological ecosystem.
 
 ## Purpose
-This repository aims to observe the interaction and long-term success of various stratgies by allowing them to compete in a virtual ecosystem. Strategies obtain points by foraging in the environment, and can use these points to survive and propagate their strategy to their offspring. We can use Game Theory to predict the long-term success of these iterated interactions.  
+This repository aims to observe the interaction and long-term success of various stratgies by allowing them to compete in a virtual ecosystem. Strategies obtain points by foraging in the environment, and can use these points to survive and propagate their strategy. We can use Game Theory to predict the long-term success of these iterated interactions.  
 
 Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
 
