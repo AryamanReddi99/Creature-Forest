@@ -7,7 +7,7 @@ This repository aims to observe the interaction and long-term success of various
 Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">  
-Plots from: ***ok***
+Plots from: ***ok***  
 ***Multiple_Species.ipynb***
 
 ## Usage
