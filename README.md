@@ -76,7 +76,7 @@ Letting doves and hawks interact results in an equilibrium. This is because each
 </p>  
 
 ***Doves vs Crows***  
-Doves and crows have a different payoff matrix: when facing a dove, its better to be a crow because extra points can be stolen. When facing a crow, its still better to be a crow because crows betray doves. Thus, playing crow is a **strictly dominant strategy** as it is a better choice no matter what strategy the opposition plays. This is a situation known as the **Prisoner's Dilemma**.
+Doves and crows have a different payoff matrix: when facing a dove, its better to be a crow because extra points can be stolen. When facing a crow, its still better to be a crow because crows don't betray other crows. Thus, playing crow is a **strictly dominant strategy** as it is a better choice no matter what strategy the opposition plays. This is a situation known as the **Prisoner's Dilemma**.
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Dual/download%20(3).png?raw=true" width="800" height="400">
