@@ -6,9 +6,9 @@ This repository aims to observe the interaction and long-term success of various
 
 Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
 
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">  
-Simulation from
-***Multiple_Species.ipynb***
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">   
+***Multiple_Species.ipynb***  
+4 strategies at once
 
 ## Usage
 These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of **Variable_Payoff.ipynb**
@@ -54,9 +54,7 @@ New agents can be added by extending the base class in **Creature_Forest_Base.ip
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="420" height="250">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="420" height="250">
 </p> 
- 
-
-**Single_Species.ipynb**. 
+***Single_Species.ipynb***.  
 From top left: Doves, Geese, Hawks, Crows. The horizontal lines indicate the average population over the simulation runtime. When left alone, each species reach an equilibrium with the environment. Hawks have a rather unstable equilibrium due to the fact that they kill each other on sight.
 
 What happens when we let them interact?  
