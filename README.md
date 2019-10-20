@@ -254,26 +254,9 @@ payoff_dict = {
 }
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1) 
 ```
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20.png?raw=true" width="800" height = "400">
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download.png?raw=true" width="800" height = "400">
   
-In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the **Strictly dominant strategy**. Notice that the population decreases as the population becomes more likely to defect, as the score for defection is lower than that for cooperation.
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing defection, the **Strictly dominant strategy**. Notice that the population decreases as the population becomes more likely to defect, as the score for defection is lower than that for cooperation. Note also the strain Mutant_0.8 which persist at equilibrium, probably due to regressive mutations in the population of Mutant_1.0.
 
 
 ## Further Reading
