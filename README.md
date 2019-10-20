@@ -200,12 +200,62 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 
 **How can we explain these results?**
 
-Just like before, we can find the expected payoff of each interaction of each interaction as a function of every strain's population fraction. We can solve the following system of equations, where E_<value> is the expected payoff of each strain, and x_<value> is its population fraction:  
+Just like before, we can find the expected payoff of each interaction as a function of every strain's population fraction. We can solve the following system of equations, where [E] is the expected payoff of each strain, and [x] is its population fraction:  
+ 
+[[E_0.0       [[3.   2.4  1.8  1.2  0.6  0.  ] [[x_0.0
+  E 0.2   =    [3.4  2.76 2.12 1.48 0.84 0.2 ]   x_0.2
+  E_0.4        [3.8  3.12 2.44 1.76 1.08 0.4 ]   x_0.4
+  E_0.6        [4.2  3.48 2.76 2.04 1.32 0.6 ]   x_0.6
+  E_0.8        [4.6  3.84 3.08 2.32 1.56 0.8 ]   x_0.8
+  E_1.0]]      [5.   4.2  3.4  2.6  1.8  1.  ]]  x_1.0]]
   
+At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix relating [x] and [E] is singular(implying a loss of dimensionality), and the result that:  
+
+x_0.0 = x_1.0
+x_0.2 = x_0.8
+x_0.4 = x_0.6
+
+As it turns out, we can prove that the expectance matrix will always be singular based on 2 facts:  
+
+1) The determinant of any nxn matrix can be reduced to a number of 3x3 matrix determinants  
+2) Any 3x3 expectance matrix formed with our linearly spaced gene pattern is singular:
+
+```python
+import sympy as sp
+a,b,c,d = sp.symbols('a b c d')
+matrix_dict = {}
+for i in range(1,4):
+    for j in range(1,4):
+        ki = sp.symbols('k{}'.format(i))
+        kj = sp.symbols('k{}'.format(j))
+        matrix_term = 'A{}{}'.format(i,j)
+        expectance = (1-ki)*(1-kj)*a + (1-ki)*(kj)*c + (ki)*(kj)*d + (ki)*(1-kj)*b
+        matrix_dict[matrix_term] = expectance
+        
+# where  ki and kj are the genes of the object and subject strains, respectively
+  
+det = matrix_dict.get("A11")*(matrix_dict.get("A22")*matrix_dict.get("A33")-matrix_dict.get("A32")*matrix_dict.get("A23")) - matrix_dict.get("A12")*(matrix_dict.get("A21")*matrix_dict.get("A33") - matrix_dict.get("A31")*matrix_dict.get("A23")) + matrix_dict.get("A13")*(matrix_dict.get("A21")*matrix_dict.get("A32")-matrix_dict.get("A31")*matrix_dict.get("A22"))
+
+sp.expand(det) = ((a*(-k2 + 1)**2 + b*k2*(-k2 + 1) + c*k2*(-k2 + 1) + d*k2**2)*(a*(-k3 + 1)**2 + b*k3*(-k3 + 1) + c*k3*(-k3 + 1) + d*k3**2) - (a*(-k2 + 1)*(-k3 + 1) + b*k2*(-k3 + 1) + c*k3*(-k2 + 1) + d*k2*k3)*(a*(-k2 + 1)*(-k3 + 1) + b*k3*(-k2 + 1) + c*k2*(-k3 + 1) + d*k2*k3))*(a*(-k1 + 1)**2 + b*k1*(-k1 + 1) + c*k1*(-k1 + 1) + d*k1**2) + (-(a*(-k2 + 1)**2 + b*k2*(-k2 + 1) + c*k2*(-k2 + 1) + d*k2**2)*(a*(-k1 + 1)*(-k3 + 1) + b*k3*(-k1 + 1) + c*k1*(-k3 + 1) + d*k1*k3) + (a*(-k1 + 1)*(-k2 + 1) + b*k2*(-k1 + 1) + c*k1*(-k2 + 1) + d*k1*k2)*(a*(-k2 + 1)*(-k3 + 1) + b*k3*(-k2 + 1) + c*k2*(-k3 + 1) + d*k2*k3))*(a*(-k1 + 1)*(-k3 + 1) + b*k1*(-k3 + 1) + c*k3*(-k1 + 1) + d*k1*k3) - ((a*(-k3 + 1)**2 + b*k3*(-k3 + 1) + c*k3*(-k3 + 1) + d*k3**2)*(a*(-k1 + 1)*(-k2 + 1) + b*k2*(-k1 + 1) + c*k1*(-k2 + 1) + d*k1*k2) - (a*(-k1 + 1)*(-k3 + 1) + b*k3*(-k1 + 1) + c*k1*(-k3 + 1) + d*k1*k3)*(a*(-k2 + 1)*(-k3 + 1) + b*k2*(-k3 + 1) + c*k3*(-k2 + 1) + d*k2*k3))*(a*(-k1 + 1)*(-k2 + 1) + b*k1*(-k2 + 1) + c*k2*(-k1 + 1) + d*k1*k2)
+= 0
+```
+This seems to imply that all multi-strain mutants will exhibit a strategy equilibrium similar to their hard-coded counterparts. Running this simulation with the payoff matrix from the prisoner's dilemma seems to confirm this:
 
 
+```python
+payoff_dict = {
+    "a": 3,
+    "b": 5,
+    "c": 0,
+    "d": 1
+}
+simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1) 
+```
+<insert pic>
+  
+In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the **Strictly dominant strategy**. 
 
-
+       
 
 
 
