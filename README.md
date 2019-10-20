@@ -171,6 +171,58 @@ payoff_dict = {
 ***Modified payoff***  
 As predicted, stable equilibrium is reached at 33% doves.
 
+## Strategy Evolution
+What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy, the chances of which will be determined by their stategy gene, `gene_B`.
+
+We can define `mutation_rate` and `gene_step` in `simulation_results()`:  
+
+```python
+starting_population = {
+    "Mutant_0":[1]
+}
+simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1)                      
+```                                   
+<insert pic>
+Each strain of mutant is named after the value of its strategy gene. We can make this distribution more continuous:
+
+```python
+simulation_results = run_simulation(starting_population=starting_population,gene_step=02,mutation_rate=0.1)  
+```
+
+<insert pic>
+  
+One step further.
+
+```python
+simulation_results = run_simulation(starting_population=starting_population,gene_step=0.1,mutation_rate=0.1) 
+```
+<insert pic>
+
+**How can we explain these results?**
+
+Just like before, we can find the expected payoff of each interaction of each interaction as a function of every strain's population fraction. We can solve the following system of equations, where E_<value> is the expected payoff of each strain, and x_<value> is its population fraction:  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Further Reading
 
 Prisoner's Dilemma:  https://www.investopedia.com/terms/p/prisoners-dilemma.asp  
