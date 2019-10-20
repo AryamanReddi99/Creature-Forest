@@ -179,21 +179,22 @@ starting_population = {
 }
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1)                      
 ```                                   
-<insert pic>
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(1).png?raw=true" width="800" height = "400">
+
 Each strain of mutant is named after the value of its strategy gene. We can make this distribution more continuous:
 
 ```python
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.2,mutation_rate=0.1)  
 ```
 
-<insert pic>
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(2).png?raw=true" width="800" height = "400">
   
 One step further:
 
 ```python
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.1,mutation_rate=0.1) 
 ```
-<insert pic>
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(3).png?raw=true" width="800" height = "400">
 
 **How can we explain these results?**
 
@@ -204,12 +205,12 @@ Just like before, we can find the expected payoff of each interaction as a funct
 where:
 
 A =   
-[[5.   4.2  3.4  2.6  1.8  1.  ]  
+[5.   4.2  3.4  2.6  1.8  1.  ]  
      [4.6  3.84 3.08 2.32 1.56 0.8 ]  
      [4.2  3.48 2.76 2.04 1.32 0.6 ]  
      [3.8  3.12 2.44 1.76 1.08 0.4 ]  
      [3.4  2.76 2.12 1.48 0.84 0.2 ]  
-     [3.   2.4  1.8  1.2  0.6  0.  ]]
+     [3.   2.4  1.8  1.2  0.6  0.  ]
   
 At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix relating [x] and [E] is singular(implying a loss of dimensionality), and the result that:  
 
@@ -253,9 +254,9 @@ payoff_dict = {
 }
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1) 
 ```
-<insert pic>
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20.png?raw=true" width="800" height = "400">
   
-In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the **Strictly dominant strategy**. 
+In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the **Strictly dominant strategy**. Notice that the population decreases as the population becomes more likely to defect, as the score for defection is lower than that for cooperation.
 
        
 
