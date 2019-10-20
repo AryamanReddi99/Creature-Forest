@@ -1,5 +1,5 @@
 # Creature-Forest
-Strategy interaction in a virtual biological ecosystem.
+Game Theory applied to a virtual biological ecosystem.
 
 ## Purpose
 This repository aims to observe the interaction and long-term success of various strategies by allowing them to compete in a virtual ecosystem. Agents obtain points by foraging in the environment, and can use these points to survive and propagate their strategy. We can use Game Theory to predict the long-term success of these iterated interactions.  
