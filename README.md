@@ -2,12 +2,9 @@
 Strategy interaction in a virtual biological ecosystem.
 
 ## Purpose
-This repository aims to observe the interaction and long-term success of various strategies by allowing them to compete in a virtual ecosystem. Agent obtain points by foraging in the environment, and can use these points to survive and propagate their strategy. We can use Game Theory to predict the long-term success of these iterated interactions.  
+This repository aims to observe the interaction and long-term success of various strategies by allowing them to compete in a virtual ecosystem. Agents obtain points by foraging in the environment, and can use these points to survive and propagate their strategy. We can use Game Theory to predict the long-term success of these iterated interactions.  
 
-Considering animals in a closed ecosystem competing for common resources is a useful analogue for visualising these simulations. However, the analysis of evolving strategies has countless applications in finance, politics, sociology, and more.
-
-<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">   
-
+<img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">  
 
 ***Multiple strategies***
 
@@ -172,7 +169,7 @@ payoff_dict = {
 As predicted, stable equilibrium is reached at 33% doves.
 
 ## Strategy Evolution
-What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy, the chances of which will be determined by their stategy gene, `gene_B`.
+What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy, by implementing `gene_B`, which determines an agent's chance of playing strategy B and can mutate every time an agent replicates.
 
 We can define `mutation_rate` and `gene_step` in `simulation_results()`:  
 
@@ -186,12 +183,12 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 Each strain of mutant is named after the value of its strategy gene. We can make this distribution more continuous:
 
 ```python
-simulation_results = run_simulation(starting_population=starting_population,gene_step=02,mutation_rate=0.1)  
+simulation_results = run_simulation(starting_population=starting_population,gene_step=0.2,mutation_rate=0.1)  
 ```
 
 <insert pic>
   
-One step further.
+One step further:
 
 ```python
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.1,mutation_rate=0.1) 
@@ -202,12 +199,17 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 
 Just like before, we can find the expected payoff of each interaction as a function of every strain's population fraction. We can solve the following system of equations, where [E] is the expected payoff of each strain, and [x] is its population fraction:  
  
-[[E_0.0       [[3.   2.4  1.8  1.2  0.6  0.  ] [[x_0.0
-  E 0.2   =    [3.4  2.76 2.12 1.48 0.84 0.2 ]   x_0.2
-  E_0.4        [3.8  3.12 2.44 1.76 1.08 0.4 ]   x_0.4
-  E_0.6        [4.2  3.48 2.76 2.04 1.32 0.6 ]   x_0.6
-  E_0.8        [4.6  3.84 3.08 2.32 1.56 0.8 ]   x_0.8
-  E_1.0]]      [5.   4.2  3.4  2.6  1.8  1.  ]]  x_1.0]]
+[E] = A[x]
+
+where:
+
+A =   
+[[5.   4.2  3.4  2.6  1.8  1.  ]  
+     [4.6  3.84 3.08 2.32 1.56 0.8 ]  
+     [4.2  3.48 2.76 2.04 1.32 0.6 ]  
+     [3.8  3.12 2.44 1.76 1.08 0.4 ]  
+     [3.4  2.76 2.12 1.48 0.84 0.2 ]  
+     [3.   2.4  1.8  1.2  0.6  0.  ]]
   
 At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix relating [x] and [E] is singular(implying a loss of dimensionality), and the result that:  
 
