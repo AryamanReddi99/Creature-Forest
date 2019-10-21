@@ -135,13 +135,10 @@ payoff_dict = {
 <p align="center">
 <img src= "https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Variable/download.png?raw=true" width = "800" height="400">
 </p>  
-
-***Payoff scores identical to Hawks vs Doves***  
-
-
-
-
-Consider the Prisoner's Dilemma once more. The problem outlines a scenario where defection by both parties is a **Nash Equilibirum** - a stable state of the system whereby no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+<p align="center">
+Fig 8. Payoffs identical to Doves/Hawks
+</p>
+Consider the Prisoner's Dilemma once more. The problem outlines a scenario where defection by both parties is a **Nash Equilibirum** - a stable state where no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
@@ -153,8 +150,8 @@ In this case two arrows flip, so the equilibrium state of the system is when 50%
 
 A payoff matrix can have one or several equilibria (which may or may not be true Nash Equilibria) depending on the interaction scores **(a, b, c ,d)** between strategies.  
 
-**Example 1**  
-What if, instead of fighting to the death, hawks left encounters wounded but with a 25% chance of survival? 
+**Example**  
+What if, instead of fighting to the death, hawks left encounters with each other wounded but with a 25% chance of survival? 
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/modified-hawks-expectance.png" width="300">
 
@@ -171,12 +168,14 @@ payoff_dict = {
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Variable/download%20(1).png?raw=true" width="800" height = "400">
 </p>
+<p align="center">
+Fig 9. Modified payoff
+</p>
 
-***Modified payoff***  
 As predicted, stable equilibrium is reached at 33% doves.
 
 ## Strategy Evolution
-What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy, by implementing `gene_B`, which determines an agent's chance of playing strategy B and can mutate every time an agent replicates.
+What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy A or B. The class attribute `gene_B`, determines an agent's chance of playing strategy B and can mutate every time an agent replicates.
 
 We can define `mutation_rate` and `gene_step` in `simulation_results()`:  
 
@@ -187,6 +186,9 @@ starting_population = {
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1)                      
 ```                                   
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(1).png?raw=true" width="800" height = "400">
+<p align="center">
+Fig 10. 3 strains
+</p>
 
 Each strain of mutant is named after the value of its strategy gene. We can make this distribution more continuous:
 
@@ -195,21 +197,26 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 ```
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(2).png?raw=true" width="800" height = "400">
-  
+<p align="center">
+Fig 11. 6 strains
+</p>
 One step further:
 
 ```python
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.1,mutation_rate=0.1) 
 ```
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(3).png?raw=true" width="800" height = "400">
+<p align="center">
+Fig 12. 11 strains
+</p>
 
 **How can we explain these results?**
 
-Just like before, we can find the expected payoff of each interaction as a function of every strain's population fraction. We can solve the following system of equations, where [E] is the expected payoff of each strain, and [x] is its population fraction:  
+Just like before, we can find the expected payoff of each interaction as a function of every strain's population fraction. We can solve the following system of equations, where [E] is a vector containing the average payoff of each strain's interactions, and [x] is a vector containing each strain's population fraction:  
  
-[E] = A[x]
+[E] = [A][x]
 
-where:
+In the case of 6 strains, we can use **Matrix_Solver.ipynb** to obtain the 6x6 matrix [A]: 
 
 A =   
 [5.   4.2  3.4  2.6  1.8  1.  ]  
@@ -219,13 +226,13 @@ A =
      [3.4  2.76 2.12 1.48 0.84 0.2 ]  
      [3.   2.4  1.8  1.2  0.6  0.  ]
   
-At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix relating [x] and [E] is singular(implying a loss of dimensionality), and the result that:  
+At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix relating [x] and [E] is singular (implying a loss of dimensionality), and the result that:  
 
-x_0.0 = x_1.0
-x_0.2 = x_0.8
-x_0.4 = x_0.6
+x_0.0 = x_1.0  
+x_0.2 = x_0.8  
+x_0.4 = x_0.6  
 
-As it turns out, we can prove that the expectance matrix will always be singular based on 2 facts:  
+As it turns out, we can prove that the expectance matrix will always be singular:  
 
 1) The determinant of any nxn matrix can be reduced to a number of 3x3 matrix determinants  
 2) Any 3x3 expectance matrix formed with our linearly spaced gene pattern is singular:
@@ -244,9 +251,19 @@ for i in range(1,4):
         
 # where  ki and kj are the genes of the object and subject strains, respectively
   
-det = matrix_dict.get("A11")*(matrix_dict.get("A22")*matrix_dict.get("A33")-matrix_dict.get("A32")*matrix_dict.get("A23")) - matrix_dict.get("A12")*(matrix_dict.get("A21")*matrix_dict.get("A33") - matrix_dict.get("A31")*matrix_dict.get("A23")) + matrix_dict.get("A13")*(matrix_dict.get("A21")*matrix_dict.get("A32")-matrix_dict.get("A31")*matrix_dict.get("A22"))
+det = matrix_dict.get("A11")*(matrix_dict.get("A22")*matrix_dict.get("A33")-matrix_dict.get("A32")*matrix_dict.get("A23")) - 
+matrix_dict.get("A12")*(matrix_dict.get("A21")*matrix_dict.get("A33") - matrix_dict.get("A31")*matrix_dict.get("A23")) +  
+matrix_dict.get("A13")*(matrix_dict.get("A21")*matrix_dict.get("A32")-matrix_dict.get("A31")*matrix_dict.get("A22"))
 
-sp.expand(det) = ((a*(-k2 + 1)**2 + b*k2*(-k2 + 1) + c*k2*(-k2 + 1) + d*k2**2)*(a*(-k3 + 1)**2 + b*k3*(-k3 + 1) + c*k3*(-k3 + 1) + d*k3**2) - (a*(-k2 + 1)*(-k3 + 1) + b*k2*(-k3 + 1) + c*k3*(-k2 + 1) + d*k2*k3)*(a*(-k2 + 1)*(-k3 + 1) + b*k3*(-k2 + 1) + c*k2*(-k3 + 1) + d*k2*k3))*(a*(-k1 + 1)**2 + b*k1*(-k1 + 1) + c*k1*(-k1 + 1) + d*k1**2) + (-(a*(-k2 + 1)**2 + b*k2*(-k2 + 1) + c*k2*(-k2 + 1) + d*k2**2)*(a*(-k1 + 1)*(-k3 + 1) + b*k3*(-k1 + 1) + c*k1*(-k3 + 1) + d*k1*k3) + (a*(-k1 + 1)*(-k2 + 1) + b*k2*(-k1 + 1) + c*k1*(-k2 + 1) + d*k1*k2)*(a*(-k2 + 1)*(-k3 + 1) + b*k3*(-k2 + 1) + c*k2*(-k3 + 1) + d*k2*k3))*(a*(-k1 + 1)*(-k3 + 1) + b*k1*(-k3 + 1) + c*k3*(-k1 + 1) + d*k1*k3) - ((a*(-k3 + 1)**2 + b*k3*(-k3 + 1) + c*k3*(-k3 + 1) + d*k3**2)*(a*(-k1 + 1)*(-k2 + 1) + b*k2*(-k1 + 1) + c*k1*(-k2 + 1) + d*k1*k2) - (a*(-k1 + 1)*(-k3 + 1) + b*k3*(-k1 + 1) + c*k1*(-k3 + 1) + d*k1*k3)*(a*(-k2 + 1)*(-k3 + 1) + b*k2*(-k3 + 1) + c*k3*(-k2 + 1) + d*k2*k3))*(a*(-k1 + 1)*(-k2 + 1) + b*k1*(-k2 + 1) + c*k2*(-k1 + 1) + d*k1*k2)
+sp.expand(det) = ((a*(-k2 + 1)**2 + b*k2*(-k2 + 1) + c*k2*(-k2 + 1) + d*k2**2)*(a*(-k3 + 1)**2 + b*k3*(-k3 + 1) + 
+c*k3*(-k3 + 1) + d*k3**2) - (a*(-k2 + 1)*(-k3 + 1) + b*k2*(-k3 + 1) + c*k3*(-k2 + 1) + d*k2*k3)*(a*(-k2 + 1)*(-k3 + 1) + 
+b*k3*(-k2 + 1) + c*k2*(-k3 + 1) + d*k2*k3))*(a*(-k1 + 1)**2 + b*k1*(-k1 + 1) + c*k1*(-k1 + 1) + d*k1**2) + (-(a*(-k2 + 1)**2 + 
+b*k2*(-k2 + 1) + c*k2*(-k2 + 1) + d*k2**2)*(a*(-k1 + 1)*(-k3 + 1) + b*k3*(-k1 + 1) + c*k1*(-k3 + 1) + d*k1*k3) + 
+(a*(-k1 + 1)*(-k2 + 1) + b*k2*(-k1 + 1) + c*k1*(-k2 + 1) + d*k1*k2)*(a*(-k2 + 1)*(-k3 + 1) + b*k3*(-k2 + 1) + 
+c*k2*(-k3 + 1) + d*k2*k3))*(a*(-k1 + 1)*(-k3 + 1) + b*k1*(-k3 + 1) + c*k3*(-k1 + 1) + d*k1*k3) - ((a*(-k3 + 1)**2 + 
+b*k3*(-k3 + 1) + c*k3*(-k3 + 1) + d*k3**2)*(a*(-k1 + 1)*(-k2 + 1) + b*k2*(-k1 + 1) + c*k1*(-k2 + 1) + d*k1*k2) - 
+(a*(-k1 + 1)*(-k3 + 1) + b*k3*(-k1 + 1) + c*k1*(-k3 + 1) + d*k1*k3)*(a*(-k2 + 1)*(-k3 + 1) + b*k2*(-k3 + 1) + 
+c*k3*(-k2 + 1) + d*k2*k3))*(a*(-k1 + 1)*(-k2 + 1) + b*k1*(-k2 + 1) + c*k2*(-k1 + 1) + d*k1*k2)
 = 0
 ```
 This seems to imply that all multi-strain mutants will exhibit a strategy equilibrium similar to their hard-coded counterparts. Running this simulation with the payoff matrix from the prisoner's dilemma seems to confirm this:
@@ -259,10 +276,12 @@ payoff_dict = {
     "c": 0,
     "d": 1
 }
-simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1) 
+simulation_results = run_simulation(starting_population=starting_population,gene_step=0.1,mutation_rate=0.01) 
 ```
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download.png?raw=true" width="800" height = "400">
-  
+<p align="center">
+Fig 13. Prisoner's Dilemma, naturally selected
+</p>
 In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing defection, the **Strictly dominant strategy**. Notice that the population decreases as the population becomes more likely to defect, as the score for defection is lower than that for cooperation. Note also the strain Mutant_0.8 which persist at equilibrium, probably due to regressive mutations in the population of Mutant_1.0.
 
 
