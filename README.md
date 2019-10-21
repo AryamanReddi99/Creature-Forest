@@ -188,7 +188,7 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 Fig 10. Three strains
 </p>
 
-Each strain of mutant is named after the value of its strategy gene. We can make this distribution more continuous:
+Each strain of mutant is named after the value of its strategy gene. For this simulation and the 2 following it, we will stick to using the Doves/Hawks payoff matrix. This means that an agent named "Mutant_0" has a 0% chance of playing Hawk, one named "Mutant_0.5" has a 50% chance of playing Hawk, and so on. We can make this distribution more continuous:
 
 ```python
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.2,mutation_rate=0.1)  
