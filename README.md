@@ -66,7 +66,7 @@ What happens when we let them interact?
 <p align="center">
 Fig 3. Doves vs Hawks
 </p>  
-Dove and Hawk interactions result in a **strategy equilibrium** as each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
+Dove and Hawk interactions result in a strategy equilibrium as each strategy's average interaction score happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
 
 
 <p align="center">
@@ -84,9 +84,7 @@ Doves and crows have a different payoff matrix: when facing a dove, its better t
 <p align="center">
 Fig 5. Geese vs Hawks
 </p> 
-When facing a goose, a player's best strategy is to also play goose, or they die. When facing a hawk, there is no dominant strategy. This means that althought the results are similar to ***Doves vs Crows***, playing goose is not a **strictly dominant strategy**.
-
-
+When facing a goose, a player's best strategy is to also play goose, or they die. When facing a hawk, there is no dominant strategy. This means that althought the results are similar to Fig 4, playing goose is not a strictly dominant strategy.   
 
 We can also allow for infiltration of invading strategies to see how they disrupt existing populations.
 
