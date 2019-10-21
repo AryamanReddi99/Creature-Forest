@@ -12,15 +12,24 @@ This repository aims to observe the interaction and long-term success of various
 ## Usage
 These scripts are best run in Jupyter notebooks, but will also work in any normal Python IDE, with the exception of **Variable_Payoff.ipynb**
 
-**Modules Required:**
-
+**Modules Required:**  
 random  
-numpy  
-pandas  
-copy  
+numpy 
+sympy
+pandas   
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
 
+New agents can be added by extending the base class in **Creature_Forest_Base.ipynb**. Each agent has a lifespan of 1, which allows it to survive for 10 cycles by default. The function `run_simulation()` runs the interactions and outputs a dataframe of agent populations. Increasing the ageing rate decreases the predictability of the model.  
+
+`run_simulation()` offers the following parameters as arguments:  
+* Starting population
+* Environmental carrying capacity
+* Number of generations
+* Invading species
+* Variable payoff scores
+* Creature ageing rates
+* Gene mutation rates
 ## Hard-coded strategies
 
 **Creature_Forest_Base.ipynb** currently defines 4 hard-coded strategies:
@@ -36,17 +45,6 @@ import_ipnyb (if using notebooks)
 4. Crow
    * Steals from doves
    * Backs down when confronted by hawks & geese
-
-New agents can be added by extending the base class in **Creature_Forest_Base.ipynb**. Each agent has a lifespan of 10 cycles. The function `run_simulation()` runs the generations and outputs a dataframe of agent populations. Hostile interactions result in death as all energy obtained is used up during the altercation. Increasing the ageing rate decreases the predictability of the model. 
-
-`run_simulation()` offers the following parameters as arguments:  
-* Starting population
-* Environmental carrying capacity
-* Number of generations
-* Invading species
-* Variable payoff scores
-* Creature ageing rates
-* Gene mutation rates
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download.png?raw=true" width="420" height="250"><img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(2).png?raw=true" width="420" height="250">
