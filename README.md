@@ -182,13 +182,15 @@ starting_population = {
     "Mutant_0":[1]
 }
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.5,mutation_rate=0.1)                      
-```                                   
+``` 
+Each strain of mutant is named after the value of its strategy gene. For the following 3 simulations,, we will stick to using the Doves/Hawks payoff matrix. This means that an agent named "Mutant_0" has a 0% chance of playing Hawk, one named "Mutant_0.5" has a 50% chance of playing Hawk, and so on. 
+
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(1).png?raw=true" width="800" height = "400">
 <p align="center">
 Fig 10. Three strains
 </p>
 
-Each strain of mutant is named after the value of its strategy gene. For this simulation and the 2 following it, we will stick to using the Doves/Hawks payoff matrix. This means that an agent named "Mutant_0" has a 0% chance of playing Hawk, one named "Mutant_0.5" has a 50% chance of playing Hawk, and so on. We can make this distribution more continuous:
+We can make this distribution more continuous:
 
 ```python
 simulation_results = run_simulation(starting_population=starting_population,gene_step=0.2,mutation_rate=0.1)  
