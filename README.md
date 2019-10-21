@@ -15,8 +15,8 @@ These scripts are best run in Jupyter notebooks, but will also work in any norma
 
 **Modules Required:**  
 random  
-numpy 
-sympy
+numpy  
+sympy  
 pandas   
 matplotlib.pyplot  
 import_ipnyb (if using notebooks)  
@@ -66,7 +66,7 @@ What happens when we let them interact?
 <p align="center">
 Fig 3. Doves vs Hawks
 </p>  
-Dove and Hawk interactions result in a **strategy equilibrium**. This is because each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
+Dove and Hawk interactions result in a **strategy equilibrium** as each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
 
 
 <p align="center">
