@@ -5,8 +5,9 @@ Game Theory and strategy evolution in a virtual biological ecosystem.
 This repository aims to observe the interaction and long-term success of various strategies by allowing them to compete in a virtual ecosystem. Agents obtain points by foraging in the environment, and can use these points to survive and propagate their strategy. We can use Game Theory to predict the long-term success of these iterated interactions.  
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">  
-
-***Multiple strategies***
+<p align="center">
+***Fig1. Multiple strategies***
+</p>
 
 
 ## Usage
@@ -52,7 +53,7 @@ New agents can be added by extending the base class in **Creature_Forest_Base.ip
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="420" height="250">
 </p>  
 
-***Isolated strategies***  
+***Isolated strategies***   
 From top left: Doves, Geese, Hawks, Crows. The horizontal lines indicate the average population over the simulation runtime. When left alone, each species reach an equilibrium with the environment. Hawks have a rather unstable equilibrium due to the fact that they kill each other on sight.
 
 What happens when we let them interact?  
@@ -62,7 +63,7 @@ What happens when we let them interact?
 </p>   
 
 ***Doves vs Hawks***  
-Letting doves and hawks interact results in an equilibrium. This is because each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
+Dove and Hawk interactions result in a **strategy equilibrium**. This is because each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
 
 
 <p align="center">
@@ -70,7 +71,7 @@ Letting doves and hawks interact results in an equilibrium. This is because each
 </p>  
 
 ***Doves vs Crows***  
-Doves and crows have a different payoff matrix: when facing a dove, its better to be a crow because extra points can be stolen. When facing a crow, its still better to be a crow because crows don't betray other crows. Thus, playing crow is a **strictly dominant strategy** as it is a better choice no matter what strategy the opposition plays. This is a situation known as the **Prisoner's Dilemma**.
+Doves and crows have a different payoff matrix: when facing a dove, its better to be a crow because extra points can be stolen. When facing a crow, its still better to be a crow because crows don't betray other crows. Thus, playing crow is known as a **strictly dominant strategy** as it is a better choice no matter what strategy the opposition plays. This is a situation known as the **Prisoner's Dilemma**.
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Dual/download%20(3).png?raw=true" width="800" height="400">
@@ -88,32 +89,32 @@ We can also allow for infiltration of invading strategies to see how they disrup
 </p>  
 
 ***Invading doves and hawks***  
-Introduction of hawks to stable dove populations, or vice-versa, eventually results in a similar equilbrium as before given that the invading agents do not starve to death due to limited resources before gaining a foothold.
+Introduction of hawks to stable dove populations, or vice-versa, eventually results in a similar equilbrium as before given that the invading agents do not immediately starve to death due to limited resources.
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(9).png?raw=true" width="800" height="400">
 </p>  
 
 ***Invading crows***  
-Crows are able to hijack a stable Hawk/Dove equilibrium by exploiting the doves until they are eliminated. They then reach a similar equilibrium with the hawks by playing Dove henceforth.
+Crows are able to hijack a stable Hawk/Dove equilibrium by exploiting the doves until they are eliminated. They then reach a similar equilibrium with the hawks by playing the Dove strategy henceforth.
 
 
 
 ## Variable payoffs
 
-Each of the above interaction scenarios has a hard-coded payoff matrix. Changing this matrix results in a different equilibrium between strategies, which we can predict.***Variable_Payoff_Simulator.ipynb*** can be used to visualise the relative expectance of two competing strategies as a function of population fraction:
+Each of the above interaction scenarios has a hard-coded payoff matrix. Changing this matrix results in a different equilibrium between strategies, which we can predict. ***Variable_Payoff_Simulator.ipynb*** can be used to visualise the relative expectance of two competing strategies as a function of population fraction:
 
 ![Image1](https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/variable_payoff.png?raw=true)
 
 Where:  
-**a**: score for Species A when facing Species A  
-**b**: score for Species B when facing Species A  
-**c**: score for Species A when facing Species B  
-**d**: score for Species B when facing Species B  
+**a**: score for Strategy A when facing Strategy A  
+**b**: score for Strategy B when facing Strategy A  
+**c**: score for Strategy A when facing Strategy B  
+**d**: score for Strategy B when facing Strategy B  
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/generalised.png" width="300">
 
-Payoff values can be defined in **payoff_dict** below to simulate population growth and resource control between Species A and Species B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
+Payoff values can be defined in **payoff_dict** to simulate population growth and resource control between Strategy A and Strategy B. The equilibrium point (if present) of the preceding plot should indicate the long-term population fraction of Species A.
 
 ```python
 payoff_dict = {
