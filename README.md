@@ -136,7 +136,7 @@ payoff_dict = {
 <p align="center">
 Fig 8. Payoffs identical to Doves/Hawks
 </p>
-Consider the Prisoner's Dilemma once more. The problem outlines a scenario where defection by both parties is a **Nash Equilibirum** - a stable state where no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
+Consider the Prisoner's Dilemma once more. The problem outlines a scenario where defection by both parties is a Nash Equilibrium -  a stable state where no agent can improve their score with a unilateral change of strategy. That payoff grid typically looks like this:
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/PD.png" width="300">
 
@@ -153,7 +153,7 @@ What if, instead of fighting to the death, hawks left encounters with each other
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/modified-hawks-expectance.png" width="300">
 
-Our expectance plot predicts equilibrium at about one-third doves. We can insert our payoff values into **payoff_dict** and observe the simulation:
+Our expectance plot predicts equilibrium at about one-third Strategy A (Doves). We can insert our payoff values into **payoff_dict** and observe the simulation:
 
 ```python
 payoff_dict = {
@@ -173,7 +173,7 @@ Fig 9. Modified payoff
 As predicted, stable equilibrium is reached at 33% doves.
 
 ## Strategy Evolution
-What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy A or B. The class attribute `gene_B`, determines an agent's chance of playing strategy B and can mutate every time an agent replicates.
+What if we gave our agents the ability to modify their strategy over time? We will define a payoff matrix and give agents a chance to play either strategy A or B. The class attribute `gene_B` determines an agent's chance of playing strategy B and can mutate every time an agent replicates.
 
 We can define `mutation_rate` and `gene_step` in `simulation_results()`:  
 
@@ -185,7 +185,7 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 ```                                   
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(1).png?raw=true" width="800" height = "400">
 <p align="center">
-Fig 10. 3 strains
+Fig 10. Three strains
 </p>
 
 Each strain of mutant is named after the value of its strategy gene. We can make this distribution more continuous:
@@ -196,7 +196,7 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(2).png?raw=true" width="800" height = "400">
 <p align="center">
-Fig 11. 6 strains
+Fig 11. Six strains
 </p>
 One step further:
 
@@ -205,7 +205,7 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 ```
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Mutants/download%20(3).png?raw=true" width="800" height = "400">
 <p align="center">
-Fig 12. 11 strains
+Fig 12. Eleven strains
 </p>
 
 **How can we explain these results?**
@@ -224,7 +224,7 @@ A =
      [3.4  2.76 2.12 1.48 0.84 0.2 ]  
      [3.   2.4  1.8  1.2  0.6  0.  ]
   
-At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix relating [x] and [E] is singular (implying a loss of dimensionality), and the result that:  
+At equilibrium, the expectances are equal. Trying to solve this system reveals that the matrix [A] is singular (implying a loss of dimensionality), and the result that:  
 
 x_0.0 = x_1.0  
 x_0.2 = x_0.8  
@@ -280,7 +280,7 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 <p align="center">
 Fig 13. Prisoner's Dilemma, naturally selected
 </p>
-In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the Strictly dominant strategy. Note that the population decreases as the population becomes more likely to defect, as the aggregate score for defection is lower than that for cooperation. Note also the strain Mutant_0.8 which persists at equilibrium, probably due to mutations in the population of Mutant_1.0.
+In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the strictly dominant strategy. Note that the total population decreases as the agents become more likely to defect, as the aggregate score for defection is lower than that for cooperation. Note also the strain Mutant_0.9 which persists at equilibrium, probably due to mutations in the population of Mutant_1.0.
 
 
 ## Further Reading
