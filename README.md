@@ -282,10 +282,11 @@ simulation_results = run_simulation(starting_population=starting_population,gene
 <p align="center">
 Fig 13. Prisoner's Dilemma, naturally selected
 </p>
-In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing defection, the **Strictly dominant strategy**. Notice that the population decreases as the population becomes more likely to defect, as the score for defection is lower than that for cooperation. Note also the strain Mutant_0.8 which persist at equilibrium, probably due to regressive mutations in the population of Mutant_1.0.
+In this case each new strain of mutant eliminates the previous, as it has a higher chance of playing the Strictly dominant strategy. Note that the population decreases as the population becomes more likely to defect, as the aggregate score for defection is lower than that for cooperation. Note also the strain Mutant_0.8 which persists at equilibrium, probably due to mutations in the population of Mutant_1.0.
 
 
 ## Further Reading
 
+GT and biology: https://www.nature.com/scitable/knowledge/library/game-theory-evolutionary-stable-strategies-and-the-25953132/  
 Prisoner's Dilemma:  https://www.investopedia.com/terms/p/prisoners-dilemma.asp  
 Doves and Hawks:  https://www.youtube.com/watch?v=YNMkADpvO4w&ab_channel=Primer
