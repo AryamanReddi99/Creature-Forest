@@ -52,8 +52,10 @@ New agents can be added by extending the base class in **Creature_Forest_Base.ip
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(1).png?raw=true" width="420" height="250">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Single/download%20(3).png?raw=true" width="420" height="250">
 </p>  
-
-***Isolated strategies***   
+<p align="center">
+Fig 2. Isolated strategies
+</p>
+  
 From top left: Doves, Geese, Hawks, Crows. The horizontal lines indicate the average population over the simulation runtime. When left alone, each species reach an equilibrium with the environment. Hawks have a rather unstable equilibrium due to the fact that they kill each other on sight.
 
 What happens when we let them interact?  
@@ -61,23 +63,26 @@ What happens when we let them interact?
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Dual/download%20(4).png?raw=true" width="800" height="400">
 </p>   
-
-***Doves vs Hawks***  
+<p align="center">
+Fig 3. Doves vs Hawks
+</p>  
 Dove and Hawk interactions result in a **strategy equilibrium**. This is because each strategy's average score from each interaction happens to be equal at a population fraction of 0.5, or 50% doves. When the fraction of doves rises above 50%, the hawks are able to score more points and increase their population. When the fraction drops below 50%, the opposite occurs. Thus, the stable equilibrium of these strategies is equal dominance.
 
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Dual/download%20(1).png?raw=true" width="800" height="400">
-</p>  
+Fig 4. Doves vs Crows
+</p>
 
-***Doves vs Crows***  
+
 Doves and crows have a different payoff matrix: when facing a dove, its better to be a crow because extra points can be stolen. When facing a crow, its still better to be a crow because crows don't betray other crows. Thus, playing crow is known as a **strictly dominant strategy** as it is a better choice no matter what strategy the opposition plays. This is a situation known as the **Prisoner's Dilemma**.
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Dual/download%20(3).png?raw=true" width="800" height="400">
 </p>  
-
-***Geese vs Hawks***  
+<p align="center">
+Fig 5. Geese vs Hawks
+</p> 
 When facing a goose, a player's best strategy is to also play goose, or they die. When facing a hawk, there is no dominant strategy. This means that althought the results are similar to ***Doves vs Crows***, playing goose is not a **strictly dominant strategy**.
 
 
@@ -87,15 +92,17 @@ We can also allow for infiltration of invading strategies to see how they disrup
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download.png?raw=true" width="420" height="250"><img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(1).png?raw=true" width="420" height="250">
 </p>  
-
-***Invading doves and hawks***  
+<p align="center">
+Fig 6. Invading doves and hawks
+</p>  
 Introduction of hawks to stable dove populations, or vice-versa, eventually results in a similar equilbrium as before given that the invading agents do not immediately starve to death due to limited resources.
 
 <p align="center">
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Infiltration/download%20(9).png?raw=true" width="800" height="400">
 </p>  
-
-***Invading crows***  
+<p align="center">
+Fig 7. Invading crows
+</p>
 Crows are able to hijack a stable Hawk/Dove equilibrium by exploiting the doves until they are eliminated. They then reach a similar equilibrium with the hawks by playing the Dove strategy henceforth.
 
 
