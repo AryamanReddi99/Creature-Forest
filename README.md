@@ -5,9 +5,8 @@ Game Theory and strategy evolution in a virtual biological ecosystem.
 This repository aims to observe the interaction and long-term success of various strategies by allowing them to compete in a virtual ecosystem. Agents obtain points by foraging in the environment, and can use these points to survive and propagate their strategy. We can use Game Theory to predict the long-term success of these iterated interactions.  
 
 <img src="https://github.com/AryamanReddi99/Creature-Forest/blob/master/Images/Multiple/download%20(4).png?raw=true" width="1000" height="400">  
-<p align="center">     
-  
-**Fig 1. Multiple strategies** 
+<p align="center">
+Fig 1. Multiple strategies
 </p>
 
 
